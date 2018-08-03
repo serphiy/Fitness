@@ -1,7 +1,7 @@
 .button {
     color: #fff;
     background-color: #fa7c30;
-    border: none;
+    border: 1px solid #fa7c30;
     cursor: pointer;
     font-family: 'Open Sans';
     font-size: 14px;
@@ -9,6 +9,11 @@
     line-height: 30px;
     letter-spacing: 1.4px;
     margin: 5px 5px;
-    padding: 9px 27px;
+    padding: 7px 25px;
     text-transform: uppercase;
+    transition: all 0.3s ease;
+    &:hover, &:focus, &:active {
+        background-color: #fff;
+        color:  #fa7c30;
+    }
 }
