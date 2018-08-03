@@ -1,0 +1,93 @@
+.sections {
+    background-color: #fff;
+}
+
+.sections__content {
+    box-sizing: border-box;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 50px 30px 60px 30px;
+}
+
+.sections__title {
+    color: #161418;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.5em;
+    text-transform: uppercase;
+    margin: 15px 15px 0 15px;
+}
+
+.sections__subtitle {
+    color: #161418;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 30px;
+    margin: 8px 15px 0 15px;
+    opacity: 0.6;
+}
+
+.sections__cards {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.section-card {
+    display: inline-block;
+    box-sizing: border-box;
+    background-color: #f1f4f6;
+    text-align: left;
+    width: 100%;
+    max-width: 350px;
+    margin: 13px 13px 13px 13px;
+    vertical-align: top;
+}
+
+    .section-card__img {
+        display: block;
+        width: 100%;
+    }
+
+    .section-card__content {
+        padding: 30px 20px 30px 20px;
+    }
+
+    .section-card__title {
+        color: #161418;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 30px;
+        text-transform: capitalize;
+        margin-top: 5px;
+    }
+
+    .section-card__desc {
+        margin: 17px 0 40px 0;
+    }
+
+    .section-card__text {
+        color: #161418;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 30px;
+        margin: 10px 0 10px 0;
+    }
+
+@media screen and (min-width: 768px) {
+    .sections__title {
+        font-size: 36px;
+    }
+
+    .section-card {
+        min-height: 696px;
+    }
+
+    .section-card__content {
+        padding: 30px 40px 30px 40px;
+    }
+
+    .section-card__title {
+        font-size: 26px;
+    }
+}
