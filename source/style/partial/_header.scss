@@ -47,6 +47,7 @@
     text-transform: uppercase;
     margin: 4px 0;
     padding: 5px 10px;
+    transition: all 0.3s ease;
     &:hover, &:focus, &:active {
         color:  #fa7c30;
     }
@@ -96,6 +97,7 @@
     margin: 0 20px;
     padding: 12px 15px;
     flex: 1 1 auto;
+    transition: all 0.3s ease;
     &:hover, &:focus, &:active {
         background-color: #fff;
         color: #161418;
