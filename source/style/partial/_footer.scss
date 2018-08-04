@@ -8,7 +8,7 @@
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
-    padding: 50px 30px 0px 33px;
+    padding: 25px 25px 0px 25px;
 }
 
 .footer__info,
@@ -256,8 +256,9 @@
 
 @media screen and (min-width: 768px) {
     .footer__main {
+        padding: 50px 30px 0px 33px;
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: flex-start;
         flex-wrap: wrap;
     }

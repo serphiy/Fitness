@@ -3,7 +3,7 @@
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
-    padding: 50px 30px 24px 30px;
+    padding: 25px 25px 24px 25px;
 }
 
 .team__title {
@@ -98,6 +98,10 @@
     }
 
 @media screen and (min-width: 768px) {
+    .team__content {
+        padding: 50px 30px 24px 30px;
+    }
+
     .team__title {
         font-size: 36px;
     }

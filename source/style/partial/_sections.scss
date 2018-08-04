@@ -7,7 +7,7 @@
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
-    padding: 50px 30px 60px 30px;
+    padding: 25px 25px 30px 25px;
 }
 
 .sections__title {
@@ -38,8 +38,8 @@
     box-sizing: border-box;
     background-color: #f1f4f6;
     text-align: left;
-    width: 100%;
-    max-width: 350px;
+    width: 350px;
+    max-width: 90%;
     margin: 13px 13px 13px 13px;
     vertical-align: top;
 }
@@ -75,6 +75,10 @@
     }
 
 @media screen and (min-width: 768px) {
+    .sections__content {
+        padding: 50px 30px 60px 30px;
+    }
+
     .sections__title {
         font-size: 36px;
     }
