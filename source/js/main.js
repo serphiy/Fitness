@@ -29,3 +29,25 @@
         }
     });
 })();
+
+(function openLogin() {
+    var loginIcon = document.querySelector('#login-icon');
+    var login = document.querySelector('#login__content');
+
+    loginIcon.addEventListener('click', function(e) {
+        login.classList.toggle('login__content_open');
+        loginIcon.classList.toggle('login-icon_open');
+        e.stopPropagation();
+    });
+
+    window.addEventListener('click', function() {
+        login.classList.remove('login__content_open');
+        loginIcon.classList.remove('login-icon_open');
+    });
+
+    login.addEventListener('click', function(e) {
+        if (e.target.tagName != 'A') {
+            e.stopPropagation();
+        }
+    });
+})();
