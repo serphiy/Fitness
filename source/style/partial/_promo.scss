@@ -1,5 +1,5 @@
 .promo {
-    background: linear-gradient(to right, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.3) 100%), url("images/promo-bg.png") center / cover no-repeat;
+    background: linear-gradient(to right, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.3) 100%), url("images/promo-bg@0.5x.png") center / cover no-repeat;
     background-color: #000;
     color: #fff;
     padding: 0 0 210px 0;
@@ -34,6 +34,10 @@
 }
 
 @media screen and (min-width: 768px) {
+    .promo {
+        background-image: linear-gradient(to right, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.3) 100%), url("images/promo-bg.png");
+    }
+
     .promo__container {
         padding: 75px 20px 90px 20px;
     }

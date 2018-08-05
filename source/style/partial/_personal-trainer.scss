@@ -1,5 +1,5 @@
 .personal-trainer {
-    background: linear-gradient(to right, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.3) 100%), url("images/personal-trainer-bg.png") center / cover no-repeat;
+    background: linear-gradient(to right, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.3) 100%), url("images/personal-trainer-bg@0.5x.png") center / cover no-repeat;
     background-color: #000;
     color: #fff;
     width: 100%;
@@ -33,6 +33,10 @@
 }
 
 @media screen and (min-width: 768px) {
+    .personal-trainer {
+        background-image: linear-gradient(to right, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.3) 100%), url("images/personal-trainer-bg.png");
+    }
+
     .personal-trainer__content {
         min-height: 300px;
         display: flex;
