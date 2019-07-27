@@ -40,9 +40,10 @@
         color: #161418;
         font-size: 14px;
         font-weight: 400;
-        line-height: 39px;
+        line-height: 19px;
         width: 163px;
         margin: 12px 12px;
+        padding: 10px 0;
         vertical-align: bottom;
         transition: all 0.3s ease;
         &:hover, &:focus {
@@ -109,11 +110,11 @@
     }
 
     .order__item_placeholder.order__item_date::after {
-        @include sprite($icon-date);
+        @include retina-sprite($icon-date-group);
     }
 
     .order__item_placeholder.order__item_time::after {
-        @include sprite($icon-time);
+        @include retina-sprite($icon-time-group);
     }
 
 @media screen and (min-width: 768px) {
@@ -133,7 +134,7 @@
 
 @media screen and (min-width: 992px) {
     .order__form {
-        background: url("images/order-bg.png") top left / 40% 100% no-repeat;
+        background: url("../img/order-bg.png") top left / 40% 100% no-repeat;
         background-color: #fff;
         max-width: 900px;
         margin-left: auto;

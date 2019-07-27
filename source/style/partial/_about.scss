@@ -40,7 +40,7 @@
 
 @media screen and (min-width: 768px) {
     .about {
-        background: url("images/about-bg@0.5x.png") 94% 57% / 30% auto no-repeat;
+        background: url("../img/about-bg@0.5x.png") 94% 57% / 30% auto no-repeat;
         background-color: transparent;
     }
 
@@ -51,7 +51,7 @@
 
 @media screen and (min-width: 992px) {
     .about {
-        background-image: url("images/about-bg.png");
+        background-image: url("../img/about-bg.png");
         background-size: 40% auto;
     }
 

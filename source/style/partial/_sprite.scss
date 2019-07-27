@@ -18,8 +18,8 @@ $icon-date-width: 14px;
 $icon-date-height: 16px;
 $icon-date-total-width: 48px;
 $icon-date-total-height: 17px;
-$icon-date-image: './images/sprite.png';
-$icon-date: (18px, 0px, -18px, 0px, 14px, 16px, 48px, 17px, './images/sprite.png', 'icon-date', );
+$icon-date-image: '../img/sprite.png';
+$icon-date: (18px, 0px, -18px, 0px, 14px, 16px, 48px, 17px, '../img/sprite.png', 'icon-date', );
 $icon-time-name: 'icon-time';
 $icon-time-x: 0px;
 $icon-time-y: 0px;
@@ -29,8 +29,8 @@ $icon-time-width: 16px;
 $icon-time-height: 17px;
 $icon-time-total-width: 48px;
 $icon-time-total-height: 17px;
-$icon-time-image: './images/sprite.png';
-$icon-time: (0px, 0px, 0px, 0px, 16px, 17px, 48px, 17px, './images/sprite.png', 'icon-time', );
+$icon-time-image: '../img/sprite.png';
+$icon-time: (0px, 0px, 0px, 0px, 16px, 17px, 48px, 17px, '../img/sprite.png', 'icon-time', );
 $icon-user-name: 'icon-user';
 $icon-user-x: 34px;
 $icon-user-y: 0px;
@@ -40,13 +40,62 @@ $icon-user-width: 14px;
 $icon-user-height: 16px;
 $icon-user-total-width: 48px;
 $icon-user-total-height: 17px;
-$icon-user-image: './images/sprite.png';
-$icon-user: (34px, 0px, -34px, 0px, 14px, 16px, 48px, 17px, './images/sprite.png', 'icon-user', );
+$icon-user-image: '../img/sprite.png';
+$icon-user: (34px, 0px, -34px, 0px, 14px, 16px, 48px, 17px, '../img/sprite.png', 'icon-user', );
+$icon-date-2x-name: 'icon-date@2x';
+$icon-date-2x-x: 36px;
+$icon-date-2x-y: 0px;
+$icon-date-2x-offset-x: -36px;
+$icon-date-2x-offset-y: 0px;
+$icon-date-2x-width: 28px;
+$icon-date-2x-height: 32px;
+$icon-date-2x-total-width: 96px;
+$icon-date-2x-total-height: 34px;
+$icon-date-2x-image: '../img/sprite@2x.png';
+$icon-date-2x: (36px, 0px, -36px, 0px, 28px, 32px, 96px, 34px, '../img/sprite@2x.png', 'icon-date@2x', );
+$icon-time-2x-name: 'icon-time@2x';
+$icon-time-2x-x: 0px;
+$icon-time-2x-y: 0px;
+$icon-time-2x-offset-x: 0px;
+$icon-time-2x-offset-y: 0px;
+$icon-time-2x-width: 32px;
+$icon-time-2x-height: 34px;
+$icon-time-2x-total-width: 96px;
+$icon-time-2x-total-height: 34px;
+$icon-time-2x-image: '../img/sprite@2x.png';
+$icon-time-2x: (0px, 0px, 0px, 0px, 32px, 34px, 96px, 34px, '../img/sprite@2x.png', 'icon-time@2x', );
+$icon-user-2x-name: 'icon-user@2x';
+$icon-user-2x-x: 68px;
+$icon-user-2x-y: 0px;
+$icon-user-2x-offset-x: -68px;
+$icon-user-2x-offset-y: 0px;
+$icon-user-2x-width: 28px;
+$icon-user-2x-height: 32px;
+$icon-user-2x-total-width: 96px;
+$icon-user-2x-total-height: 34px;
+$icon-user-2x-image: '../img/sprite@2x.png';
+$icon-user-2x: (68px, 0px, -68px, 0px, 28px, 32px, 96px, 34px, '../img/sprite@2x.png', 'icon-user@2x', );
 $spritesheet-width: 48px;
 $spritesheet-height: 17px;
-$spritesheet-image: './images/sprite.png';
+$spritesheet-image: '../img/sprite.png';
 $spritesheet-sprites: ($icon-date, $icon-time, $icon-user, );
-$spritesheet: (48px, 17px, './images/sprite.png', $spritesheet-sprites, );
+$spritesheet: (48px, 17px, '../img/sprite.png', $spritesheet-sprites, );
+$retina-spritesheet-width: 96px;
+$retina-spritesheet-height: 34px;
+$retina-spritesheet-image: '../img/sprite@2x.png';
+$retina-spritesheet-sprites: ($icon-date-2x, $icon-time-2x, $icon-user-2x, );
+$retina-spritesheet: (96px, 34px, '../img/sprite@2x.png', $retina-spritesheet-sprites, );
+
+// These "retina group" variables are mappings for the naming and pairing of normal and retina sprites.
+//
+// The list formatted variables are intended for mixins like `retina-sprite` and `retina-sprites`.
+$icon-date-group-name: 'icon-date';
+$icon-date-group: ('icon-date', $icon-date, $icon-date-2x, );
+$icon-time-group-name: 'icon-time';
+$icon-time-group: ('icon-time', $icon-time, $icon-time-2x, );
+$icon-user-group-name: 'icon-user';
+$icon-user-group: ('icon-user', $icon-user, $icon-user-2x, );
+$retina-groups: ($icon-date-group, $icon-time-group, $icon-user-group, );
 
 // The provided mixins are intended to be used with the array-like variables
 //
@@ -98,6 +147,34 @@ $spritesheet: (48px, 17px, './images/sprite.png', $spritesheet-sprites, );
   @include sprite-height($sprite);
 }
 
+// The `retina-sprite` mixin sets up rules and a media query for a sprite/retina sprite.
+//   It should be used with a "retina group" variable.
+//
+// The media query is from CSS Tricks: https://css-tricks.com/snippets/css/retina-display-media-query/
+//
+// $icon-home-group: ('icon-home', $icon-home, $icon-home-2x, );
+//
+// .icon-home {
+//   @include retina-sprite($icon-home-group);
+// }
+@mixin sprite-background-size($sprite) {
+  $sprite-total-width: nth($sprite, 7);
+  $sprite-total-height: nth($sprite, 8);
+  background-size: $sprite-total-width $sprite-total-height;
+}
+
+@mixin retina-sprite($retina-group) {
+  $normal-sprite: nth($retina-group, 2);
+  $retina-sprite: nth($retina-group, 3);
+  @include sprite($normal-sprite);
+
+  @media (-webkit-min-device-pixel-ratio: 2),
+         (min-resolution: 192dpi) {
+    @include sprite-image($retina-sprite);
+    @include sprite-background-size($normal-sprite);
+  }
+}
+
 // The `sprites` mixin generates identical output to the CSS template
 //   but can be overridden inside of SCSS
 //
@@ -107,6 +184,19 @@ $spritesheet: (48px, 17px, './images/sprite.png', $spritesheet-sprites, );
     $sprite-name: nth($sprite, 10);
     .#{$sprite-name} {
       @include sprite($sprite);
+    }
+  }
+}
+
+// The `retina-sprites` mixin generates a CSS rule and media query for retina groups
+//   This yields the same output as CSS retina template but can be overridden in SCSS
+//
+// @include retina-sprites($retina-groups);
+@mixin retina-sprites($retina-groups) {
+  @each $retina-group in $retina-groups {
+    $sprite-name: nth($retina-group, 1);
+    .#{$sprite-name} {
+      @include retina-sprite($retina-group);
     }
   }
 }
