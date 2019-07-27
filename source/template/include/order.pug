@@ -3,7 +3,7 @@ section.order#order
         p.order__subtitle Free 7 days
         h2.order__title Online booking
         .order__content
-            label.order__label.order__label_select
+            label.order__label.order__label_select People
                 select.order__item.order__item_select.order__select_placeholder(name="people" required onchange="this.classList.remove('order__select_placeholder')")
                     option.order__option(value="" disabled hidden selected) People
                     option.order__option(value="1") 1 Person
@@ -11,9 +11,14 @@ section.order#order
                     option.order__option(value="3") 3 People
                     option.order__option(value="4") 4 People
                     option.order__option(value="5") 5 People
-            input.order__item.order__item_date.order__item_placeholder(type="date" name="date" placeholder="Date" required onfocus="this.classList.remove('order__item_placeholder')")
-            input.order__item.order__item_time.order__item_placeholder(type="time" name="time" placeholder="Time" required onfocus="this.classList.remove('order__item_placeholder')")
-            input.order__item(type="text" name="name" placeholder="Name" required)
-            input.order__item(type="tel" name="phone" placeholder="Phone" required)
-            input.order__item(type="email" name="email" placeholder="Email" required)
+            label.order__label Date
+                input.order__item.order__item_date.order__item_placeholder(type="date" name="date" placeholder="Date" required onfocus="this.classList.remove('order__item_placeholder')")
+            label.order__label Time
+                input.order__item.order__item_time.order__item_placeholder(type="time" name="time" placeholder="Time" required onfocus="this.classList.remove('order__item_placeholder')")
+            label.order__label Name
+                input.order__item(type="text" name="name" placeholder="Name" required)
+            label.order__label Phone
+                input.order__item(type="tel" name="phone" placeholder="Phone" required)
+            label.order__label Email
+                input.order__item(type="email" name="email" placeholder="Email" required)
         button.button Get in touch

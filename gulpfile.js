@@ -24,7 +24,7 @@ const sourcemaps   = require('gulp-sourcemaps');
 
 // const realFavicon = require ('gulp-real-favicon');
 // const fs = require('fs');
-// const FAVICON_DATA_FILE = 'faviconData.json';
+// const FAVICON_DATA_FILE = './source/faviconData.json';
 
 const path = {
     build: {
@@ -106,7 +106,7 @@ gulp.task('style:build', function () {
             add: true
         }))
         .pipe(rename({suffix: '.min'}))
-        .pipe(sourcemaps.write())
+        .pipe(sourcemaps.write('./'))
         .pipe(gulp.dest(path.build.css));
 });
 
@@ -122,7 +122,7 @@ gulp.task('js:build', function () {
             console.error('Error from uglify,', err.toString());
         }))
         .pipe(rename({suffix: '.min'}))
-        .pipe(sourcemaps.write())
+        .pipe(sourcemaps.write('./'))
         .pipe(gulp.dest(path.build.js));
 });
 
@@ -191,7 +191,7 @@ gulp.task('fonts:copy', function() {
 /* ---------- Generate Favicon ----------- */
 // gulp.task('generate-favicon', function(done) {
 //     realFavicon.generateFavicon({
-//         masterPicture: 'source/favicon.svg',
+//         masterPicture: 'source/favicon.png',
 //         dest: 'source/img/favicons/',
 //         iconsPath: '/img/favicons/',
 //         design: {
@@ -209,7 +209,7 @@ gulp.task('fonts:copy', function() {
 //             desktopBrowser: {},
 //             windows: {
 //                 pictureAspect: 'noChange',
-//                 backgroundColor: '#2d89ef',
+//                 backgroundColor: '#da532c',
 //                 onConflict: 'override',
 //                 assets: {
 //                     windows80Ie10Tile: false,
@@ -225,7 +225,7 @@ gulp.task('fonts:copy', function() {
 //                 pictureAspect: 'noChange',
 //                 themeColor: '#ffffff',
 //                 manifest: {
-//                     name: 'Fitness project',
+//                     name: 'Fitness',
 //                     display: 'standalone',
 //                     orientation: 'notSet',
 //                     onConflict: 'override',
@@ -238,7 +238,7 @@ gulp.task('fonts:copy', function() {
 //             },
 //             safariPinnedTab: {
 //                 pictureAspect: 'silhouette',
-//                 themeColor: '#5bbad5'
+//                 themeColor: '#fa7c30'
 //             }
 //         },
 //         settings: {

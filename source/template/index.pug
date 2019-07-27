@@ -1,13 +1,21 @@
 doctype html
-html
+html(lang="en")
     head
         meta(charset="utf-8")
         title Fitness
         meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        meta(http-equiv="Cache-Control" content="public")
+        meta(http-equiv="x-dns-prefetch-control" content="on")
+        meta(name="description" content="Fitness")
+        meta(name="keywords" content="fitness")
+        meta(name="robots" content="index, follow")
         link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/brands.css" integrity="sha384-nT8r1Kzllf71iZl81CdFzObMsaLOhqBU1JD2+XoAALbdtWaXDOlWOZTR4v1ktjPE" crossorigin="anonymous")
         link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/fontawesome.css" integrity="sha384-HbmWTHay9psM8qyzEKPc8odH4DsOuzdejtnr+OFtDmOcIVnhgReQ4GZBH7uwcjf6" crossorigin="anonymous")
-        link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700")
+        link(rel="preconnect" href="//fonts.gstatic.com" crossorigin)
+        link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap")
         link(rel="stylesheet" type="text/css" href="css/main.min.css")
+        include include/favicons.pug
     body
         include include/promo.pug
         include include/order.pug

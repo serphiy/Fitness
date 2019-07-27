@@ -29,7 +29,10 @@
 .order__content {
     margin-bottom: 59px;
 }
-
+    .order__label {
+        display: inline-block;
+        font-size: 0;
+    }
     .order__item {
         display: inline-block;
         box-sizing: border-box;
